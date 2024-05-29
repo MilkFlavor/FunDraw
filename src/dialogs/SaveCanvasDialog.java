@@ -21,10 +21,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import funpaint.PixelCanvas;
 import managers.ImageFileManager;
-import paintpix.PixelCanvas;
 
-@SuppressWarnings("serial")
 public class SaveCanvasDialog extends JDialog {
 	public final static int APPROVE_OPTION = 1;
 	public final static int CANCEL_OPTION = 0;

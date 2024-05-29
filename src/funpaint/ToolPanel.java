@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +7,6 @@ import javax.swing.*;
 
 import tools.*;
 
-@SuppressWarnings("serial")
 public class ToolPanel extends JToolBar {
 	private MainController controller;
 	

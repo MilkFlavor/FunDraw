@@ -1,11 +1,10 @@
-package paintpix;
+package funpaint;
 
 
 import java.awt.image.Raster;
 import java.io.Serializable;
 import java.util.concurrent.LinkedBlockingDeque;
 
-@SuppressWarnings("serial")
 public class CanvasUndoManager implements Serializable{
 	private LinkedBlockingDeque<Raster> history;
 	private LinkedBlockingDeque<Raster> undoed;

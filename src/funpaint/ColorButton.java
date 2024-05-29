@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -8,7 +8,6 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-@SuppressWarnings("serial")
 public class ColorButton extends JButton {
 	/**
 	 * Button with a color as its background

@@ -11,8 +11,6 @@ import java.util.List;
 
 import javax.swing.*;
 
-
-@SuppressWarnings("serial")
 public class ColorChooserButton extends JButton {
     private Color current;
 

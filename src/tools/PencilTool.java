@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 import javax.swing.ImageIcon;
 
-import paintpix.*;
+import funpaint.*;
 
 
 public class PencilTool extends Tool {

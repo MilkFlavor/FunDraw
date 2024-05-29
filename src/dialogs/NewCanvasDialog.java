@@ -18,7 +18,6 @@ import javax.swing.JPanel;
 
 import dialogs.ColorChooserButton.ColorChangedListener;
 
-@SuppressWarnings("serial")
 public class NewCanvasDialog extends JDialog {
 	public final static int APPROVE_OPTION = 1;
 	public final static int CANCEL_OPTION = 0;

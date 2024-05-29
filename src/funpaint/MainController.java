@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 import java.awt.image.BufferedImage;
 

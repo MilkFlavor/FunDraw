@@ -1,7 +1,7 @@
-package paintpix;
-
 import java.awt.*;
 import javax.swing.*;
+
+import funpaint.MainFrame;
 
 // entry point class
 public class Main {

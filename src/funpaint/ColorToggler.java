@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -11,7 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JToolBar;
 
-@SuppressWarnings("serial")
 public class ColorToggler extends JToolBar implements ActionListener {
 	private MainController controller;
 	private ColorButton primaryColorButton;

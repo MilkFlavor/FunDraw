@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 import java.awt.Color;
 
@@ -7,7 +7,6 @@ import javax.swing.colorchooser.AbstractColorChooserPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-@SuppressWarnings("serial")
 public class ColorPicker extends JColorChooser{
 	private MainController controller;
 	

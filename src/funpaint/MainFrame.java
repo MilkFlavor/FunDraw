@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 
 import java.awt.event.*;
@@ -6,7 +6,6 @@ import javax.swing.*;
 
 import java.awt.*;
 
-@SuppressWarnings("serial")
 public class MainFrame extends JFrame  {
 	private ColorPicker colorPicker;
 	private ToolPanel toolPanel;

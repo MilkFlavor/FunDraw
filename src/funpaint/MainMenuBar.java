@@ -1,8 +1,7 @@
-package paintpix;
+package funpaint;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 
 import javax.swing.AbstractAction;
 import javax.swing.ImageIcon;
@@ -12,7 +11,6 @@ import javax.swing.JMenuItem;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
-@SuppressWarnings("serial")
 public class MainMenuBar extends JMenuBar{
 	private MainController controller;
 	
@@ -103,14 +101,12 @@ public class MainMenuBar extends JMenuBar{
 			
 			@Override
 			public void menuDeselected(MenuEvent e) {
-				// TODO Auto-generated method stub
-				
+				recentlyOpenedMenu.removeAll();
 			}
 			
 			@Override
 			public void menuCanceled(MenuEvent e) {
-				// TODO Auto-generated method stub
-				
+				recentlyOpenedMenu.removeAll();	
 			}
 		});
 		

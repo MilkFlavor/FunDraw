@@ -1,4 +1,4 @@
-package paintpix;
+package funpaint;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -11,11 +11,11 @@ import javax.swing.*;
 
 import tools.Tool;
 
-@SuppressWarnings("serial")
+
 /**
  * Custom Canvas component
  */
-public class PixelCanvas extends JComponent implements Serializable{
+public class PixelCanvas extends JComponent{
 	transient private BufferedImage pixels; 
 	
 	// save information

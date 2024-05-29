@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import javax.swing.ImageIcon;
 
-import paintpix.PixelCanvas;
+import funpaint.PixelCanvas;
 
 
 public class BucketTool extends Tool {	
