@@ -12,8 +12,6 @@ import javax.swing.JMenuItem;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
-import managers.CanvasDatabaseObject;
-
 @SuppressWarnings("serial")
 public class MainMenuBar extends JMenuBar{
 	private MainController controller;
