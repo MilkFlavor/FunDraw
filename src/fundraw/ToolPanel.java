@@ -1,4 +1,4 @@
-package funpaint;
+package fundraw;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,9 +14,6 @@ public class ToolPanel extends JToolBar {
 	private BucketTool bucket;
 	private EyeDropperTool eyeDropper;
 	private EraserTool eraser;
-
-	
-	
 	
 	public ToolPanel() {
 		super("Tools", JToolBar.VERTICAL);
