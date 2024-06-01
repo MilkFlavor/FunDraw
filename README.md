@@ -1,2 +1,1 @@
-hello aasasasdareta4rd w55hats up
-ASasasASawsasas
+Welcome to FunDraw. The best art app on the Market!
