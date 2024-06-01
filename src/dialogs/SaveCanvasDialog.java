@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import funpaint.PixelCanvas;
+import fundraw.PixelCanvas;
 import managers.ImageFileManager;
 
 public class SaveCanvasDialog extends JDialog {

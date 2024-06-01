@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 
-import funpaint.PixelCanvas;
+import fundraw.PixelCanvas;
 
 public class EraserTool extends Tool{
 	private boolean pressed;

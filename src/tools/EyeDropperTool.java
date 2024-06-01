@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 import javax.swing.ImageIcon;
 
-import funpaint.PixelCanvas;
+import fundraw.PixelCanvas;
 
 
 public class EyeDropperTool extends Tool {	

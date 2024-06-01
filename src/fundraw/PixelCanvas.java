@@ -286,6 +286,7 @@ public class PixelCanvas extends JComponent{
 		Color c = new Color(rgb, true);
 		
 		this.controller.getColorPicker().setColor(c);
+		this.controller.getColorToggler().setColor(c);
 		
 	}
 	

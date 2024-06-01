@@ -14,6 +14,7 @@ public class GlobalKeyBinder {
 		KeyStroke saveKey = KeyStroke.getKeyStroke(KeyEvent.VK_S, AWTEvent.RESERVED_ID_MAX);
 		KeyStroke newKey = KeyStroke.getKeyStroke(KeyEvent.VK_N, AWTEvent.RESERVED_ID_MAX);
 		KeyStroke openKey = KeyStroke.getKeyStroke(KeyEvent.VK_O, AWTEvent.RESERVED_ID_MAX);
+		KeyStroke swapColorsKey = KeyStroke.getKeyStroke('x');
 		
 		root.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(undoKey, "undo");
 		root.getActionMap().put("undo", new AbstractAction() {			
@@ -54,6 +55,14 @@ public class GlobalKeyBinder {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				GlobalKeyBinder.this.controller.createNewCanvas();
+			}
+		});
+		
+		root.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(swapColorsKey, "swapColors");
+		root.getActionMap().put("swapColors", new AbstractAction() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GlobalKeyBinder.this.controller.getColorToggler().swapColors();
 			}
 		});
 		

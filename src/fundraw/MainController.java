@@ -5,8 +5,8 @@ import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import dialogs.NewCanvas;
-import dialogs.SaveCanvas;
+import dialogs.NewCanvasDialog;
+import dialogs.SaveCanvasDialog;
 import managers.ImageFileManager;
 import tools.Tool;
 
@@ -19,6 +19,7 @@ public class MainController {
 	private ToolPanel toolPanel;
 	private ControlPanel controlPanel;
 	private ColorPicker colorPicker;
+	private ColorToggler colorToggler;
 
 	private JPanel canvasPanel;
 	private PixelCanvas canvas;
@@ -33,18 +34,21 @@ public class MainController {
 		this.colorPicker = mainFrame.getColorPicker();
 		this.canvasPanel = mainFrame.getCanvasPanel();
 		this.controlPanel = mainFrame.getControlPanel();
+		this.colorToggler = mainFrame.getColorToggler();
 		
 		// start as 2 pixel by default
 		this.size = 2;
+		this.colorToggler.setController(this);
 		this.controlPanel.setController(this);
 		this.toolPanel.setController(this);
+		this.colorPicker.setController(this);
 	}
 	
 	public void createNewCanvas()
 	{
-		NewCanvas d = new NewCanvas(this.mainFrame);
+		NewCanvasDialog d = new NewCanvasDialog(this.mainFrame);
 		int closeOption = d.showOpenDialog();
-		if(closeOption == NewCanvas.APPROVE_OPTION) {
+		if(closeOption == NewCanvasDialog.APPROVE_OPTION) {
 			boolean created = createCanvas(d.getChosenWidth(), d.getChosenHeight());
 			if(created)
 				this.canvas.fill(d.getChosenFillColor());
@@ -62,6 +66,7 @@ public class MainController {
 		this.canvas.setScale(this.calculateScale());
 		this.canvas.setController(this);
 		this.canvasPanel.add(this.canvas);
+		this.colorToggler.updateCanvas();
 		this.mainFrame.getCanvasContainer().repaint();
 		this.mainFrame.revalidate();
 		return true;
@@ -82,6 +87,7 @@ public class MainController {
 		this.canvas.setScale(this.calculateScale());
 		this.canvas.setController(this);
 		this.canvasPanel.add(this.canvas);
+		this.colorToggler.updateCanvas();
 		this.mainFrame.getCanvasContainer().repaint();
 		this.mainFrame.revalidate();
 		return true;
@@ -101,6 +107,7 @@ public class MainController {
 		this.canvas.setScale(this.calculateScale());
 		this.canvas.setController(this);
 		this.canvasPanel.add(this.canvas);
+		this.colorToggler.updateCanvas();
 		this.mainFrame.getCanvasContainer().repaint();
 		this.mainFrame.revalidate();
 		return true;
@@ -204,11 +211,11 @@ public class MainController {
 		if(this.canvas == null)
 			return;
 		
-		SaveCanvas d = new SaveCanvas(this.mainFrame, this.canvas);
+		SaveCanvasDialog d = new SaveCanvasDialog(this.mainFrame, this.canvas);
 		
 		int closeOption = d.showOpenDialog();
 		
-		if(closeOption != SaveCanvas.APPROVE_OPTION)
+		if(closeOption != SaveCanvasDialog.APPROVE_OPTION)
 			return;
 		
 		
@@ -280,6 +287,11 @@ public class MainController {
 
 	public JPanel getCanvasPanel() {
 		return this.canvasPanel;
+	}
+	
+	
+	public ColorToggler getColorToggler() {
+		return colorToggler;
 	}
 
 	public int getSize() {

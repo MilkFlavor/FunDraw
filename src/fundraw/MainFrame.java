@@ -11,6 +11,7 @@ public class MainFrame extends JFrame  {
 	private ToolPanel toolPanel;
 	private JPanel canvasPanel;
 	private ControlPanel controlPanel;
+	private ColorToggler colorToggler;
 	private ToolSizeSlider sizeSlider;
 	
 	private JScrollPane canvasContainer;
@@ -46,6 +47,8 @@ public class MainFrame extends JFrame  {
 		
         canvasPanel = new JPanel(new GridBagLayout());
         canvasContainer = new JScrollPane(canvasPanel);
+        colorToggler = new ColorToggler(Color.BLACK, Color.WHITE);
+        controlPanel.add(colorToggler);
 
         // creating Main controller
         controller = new MainController(this);
@@ -96,6 +99,11 @@ public class MainFrame extends JFrame  {
 	public ControlPanel getControlPanel()
 	{
 		return this.controlPanel;
+	}
+
+	public ColorToggler getColorToggler() {
+
+		return this.colorToggler;
 	}
 
 	
